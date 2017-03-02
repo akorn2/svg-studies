@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/akorn2/svg-studies/issues"
   },
-  "homepage": "https://github.com/akorn2/svg-studies#readme"
+  "homepage": "https://github.com/akorn2/svg-studies#readme",
+  "dependencies": {
+    "svg.js": "^2.4.0"
+  },
+  "devDependencies": {},
+  "keywords": []
 }

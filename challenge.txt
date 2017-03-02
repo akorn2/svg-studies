@@ -1,0 +1,7 @@
+
+
+outline-offset: 70px; /* WHAT! */
+outline: 50px solid rgba(0,0,0,0.2); /* Yeah!
+
+Css:
+http://codepen.io/wesbos/pen/oBEBXw
