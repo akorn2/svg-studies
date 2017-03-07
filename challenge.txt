@@ -1,7 +1,12 @@
-
-
+Css Refrence:
+http://codepen.io/wesbos/pen/oBEBXw
 outline-offset: 70px; /* WHAT! */
 outline: 50px solid rgba(0,0,0,0.2); /* Yeah!
 
-Css:
-http://codepen.io/wesbos/pen/oBEBXw
+
+NPM: Physics.js [https://github.com/wellcaffeinated/PhysicsJS/wiki]
+Give svg's and interactive quiality
+
+
+Compare Mojs to Greensocks?
+https://github.com/legomushroom/mojs
