@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
       var poster = document.querySelector('#drawing');
       poster.style.dipslay = "none";
 
-      var draw = SVG('drawing').size('100%', '100%').spof().viewbox(0, 0, 400, 150);
+      var draw = SVG('drawing').size('100%', '100%').spof().viewbox(0, 0, 700, 450);
 
 
       var bg = draw.symbol()
@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
         var tileBL = draw.use(symbolTileTL).move(0,75)
         var tileBR = draw.use(symbolTileTR).move(100,75)
 
-
       var patternTileStrips = draw.pattern(200,150, function(add){ });
       patternTileStrips.add(tileLeft)
       patternTileStrips.add(tileRight)
@@ -63,6 +62,29 @@ document.addEventListener('DOMContentLoaded', function() {
       patternTileStrips.add(tileBR)
 
       var containerTilesStripes = draw.rect(700,600).attr({ fill: patternTileStrips });
+
+
+
+      var circleS = draw.circle(45).attr({ fill:'rgba(38,117,177, 1)'});
+      var circleM = draw.circle(62).move(-8.5,-8.5).attr({ fill:'rgba(38,17,177, 1)'});
+      var circleL = draw.circle(88).move(-21,-21).attr({ fill:'rgba(38,17,77, 1)'});
+
+      var groupCircles = draw.group();
+      groupCircles
+      .add(circleL)
+      .add(circleM)
+      .add(circleS)
+      groupCircles.move(43,43)
+
+    var patternCircles = draw.pattern(200,150, function(add){ });
+    patternCircles.add(groupCircles).move(37.5,-68)
+
+    var containerTilesCircles = draw.rect(700,600).attr({ fill: patternCircles });
+
+
+
+
+
 
       // var groupTileMaskedz = yum2.maskWith(draw.rect(100,75).fill('#ffffff'));
       // groupTileMaskedz.addClass('rotate').move(100,0).rotate(180);
