@@ -1,7 +1,9 @@
-Css Refrence:
-http://codepen.io/wesbos/pen/oBEBXw
+Css Reference[http://codepen.io/wesbos/pen/oBEBXw]
 outline-offset: 70px; /* WHAT! */
 outline: 50px solid rgba(0,0,0,0.2); /* Yeah!
+
+Css Reference[https://codepen.io/Schleichkorn/pen/evWEeM]
+background-clip: border-box;
 
 
 NPM: Physics.js [https://github.com/wellcaffeinated/PhysicsJS/wiki]
