@@ -65,22 +65,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-      var circleS = draw.circle(45).attr({ fill:'rgba(38,117,177, 1)'});
-      var circleM = draw.circle(62).move(-8.5,-8.5).attr({ fill:'rgba(38,17,177, 1)'});
-      var circleL = draw.circle(88).move(-21,-21).attr({ fill:'rgba(38,17,77, 1)'});
+      var circleS = draw.circle(45).move(21,21).attr({ fill:'rgba(38,117,177, 1)'});
+      var circleM = draw.circle(62).move(12.5,12.5).attr({ fill:'rgba(38,17,177, 1)'});
+      var circleL = draw.circle(88).move(0,0).attr({ fill:'rgba(38,17,77, 1)'});
 
-      var groupCircles = draw.group();
-      groupCircles
+      var symbolCircles = draw.symbol();
+      symbolCircles
       .add(circleL)
       .add(circleM)
       .add(circleS)
-      groupCircles.move(43,43)
+      symbolCircles.move(43,43)
 
-    var patternCircles = draw.pattern(200,150, function(add){ });
-    patternCircles.add(groupCircles).move(37.5,-68)
+      var useCirclesA = draw.use(symbolCircles).move(12.5,-12.5);
+      var useCirclesB = draw.use(symbolCircles).move(12.5,-12.5);
 
-    var containerTilesCircles = draw.rect(700,600).attr({ fill: patternCircles });
+    var patternCirclesA = draw.pattern(200,150, function(add){ });
+    patternCirclesA.add(useCirclesA).move(-100,0)
+    var containerTilesCirclesA = draw.rect(700,600).attr({ fill: patternCirclesA });
 
+
+    var patternCirclesB = draw.pattern(200,150, function(add){ });
+    patternCirclesB.add(useCirclesB).move(0,75)
+    var containerTilesCirclesB = draw.rect(700,600).attr({ fill: patternCirclesB });
 
 
 
